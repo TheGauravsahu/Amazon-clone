@@ -7,10 +7,10 @@ export const useSupabase = () => {
     const [singleProduct, setSingleProduct] = useState<any>([])
   
   const getDataFromSupabase = async () => {
-    let { data, error } = await supabase.from("products").select("*");
+    let { data, error } = await supabase.from("Product").select("*");
     if (data) {
       setProducts(data);
-      // console.log(data);
+      console.log(data);
     }
     if (error) {
       console.log(error);
@@ -18,10 +18,10 @@ export const useSupabase = () => {
   }
 
   const getFilteredData = async (query:string) => {
-    let { data, error } = await supabase.from("products").select("*").or(`title.ilike.%${query}%, description.ilike.%${query}%, category.ilike.%${query}%`);
+    let { data, error } = await supabase.from("Product").select("*").or(`title.ilike.%${query}%, description.ilike.%${query}%,products__brand.ilike.%${query}%,products__category.ilike.%${query}%`);
     if (data) {
       setFilterData(data);
-      // console.log(data);
+      console.log(data);
     }
     if (error) {
       console.log(error);
@@ -29,10 +29,10 @@ export const useSupabase = () => {
   }
 
   const getSingleProduct = async (id:number) => {
-    let { data, error } = await supabase.from("products").select("*").eq('id',id);
+    let { data, error } = await supabase.from("Product").select("*").eq('id',id);
     if (data) {
       setSingleProduct(data);
-      // console.log(data);
+      console.log(data);
     }
     if (error) {
       console.log(error);

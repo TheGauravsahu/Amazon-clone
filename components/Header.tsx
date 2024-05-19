@@ -33,25 +33,27 @@ const Header = () => {
         className="w-full bg-[#131921]
      text-white py-4 items-center gap-7 lg:justify-center justify-between px-6 lg:px-0 cursor-pointer flex"
       >
-        <div className="w-[30%] lg:w-fit flex items-center gap-1">
+        <div className="w-[40%] md:w-fit flex items-center gap-1">
           <Link href="/">
             <Image width={100} height={100} src={Logo} alt="Amazon Logo" />
           </Link>
           
         </div>
 
-        <div className="flex bg-[#FEBD69] items-center rounded-sm w-[60%] lg:w-fit">
+        <div className="flex bg-[#FEBD69] items-center rounded-[2px] sm:w-[60%] w-fit">
           <input
-            className="lg:w-[40rem] w-[80%] h-[2.5rem] px-2  rounded-l-sm placeholder:text-sm text-black outline-orange-400"
+            className="w-[90%] h-[2.5rem] px-2 rounded-l-[2px] placeholder:text-sm text-black outline-orange-400"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             type="text"
             placeholder="Search Amazon.in"
           />
+          <div className="w-[10%] rounded-lg flex items-center justify-center">
           <IoSearch
             onClick={searchHandler}
             className="text-2xl text-black font-bold mx-2"
           />
+          </div>
         </div>
 
         <div className="lg:hidden text-white z-[99999] flex gap-2">

@@ -14,7 +14,7 @@ const SingleProductpage = () => {
   }, [getSingleProduct,id]);
 
   return (
-    <div className="flex flex-col lg:flex-row w-full mx-auto">
+    <div className="flex flex-col lg:flex-row w-full mx-auto bg-white">
       <SingleProduct singleProduct={singleProduct}/>
       <AddToCartContainer singleProduct={singleProduct}/>
     </div>

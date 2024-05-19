@@ -13,8 +13,8 @@ import { useSupabase } from '@/lib/supabase/hooks/useSupabase';
 export default function Home() {
   
   return (
-    <div className="w-full overflow-x-hidden ">
-      <div className="w-full -z-0 scale-75 lg:scale-90">
+    <div className="w-full overflow-x-hidden bg-white">
+      <div className="w-full -z-0 scale-90 lg:scale-100">
         <Carousel>
           <CarouselContent>
             <CarouselItem>
