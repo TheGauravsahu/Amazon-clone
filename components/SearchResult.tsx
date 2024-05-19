@@ -23,11 +23,11 @@ const SearchResult = ({ filterData }: { filterData: any }) => {
               >
                 <div className=" flex items-center justify-center bg-gray-100 h-[250px] rounded-md overflow-hidden">
                   <Image
-                    className="object-cover"
+                    className="object-cover scale-90"
                     src={product.products__images__001}
                     alt={product.title}
-                    width={400}
-                    height={300}
+                    width={200}
+                    height={200}
                   />
                 </div>
                 <h1 className="font-bold">{product.title}</h1>
