@@ -37,33 +37,34 @@ const Header = () => {
           <Link href="/">
             <Image width={100} height={100} src={Logo} alt="Amazon Logo" />
           </Link>
-          
         </div>
 
         <div className="flex bg-[#FEBD69] items-center rounded-[2px] sm:w-[60%] w-fit">
           <input
-            className="w-[90%] h-[2.5rem] px-2 rounded-l-[2px] placeholder:text-sm text-black outline-orange-400"
+            className="w-[80%] lg:w-[90%] h-[2.5rem] px-2 rounded-l-[2px] placeholder:text-sm text-black outline-orange-400"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             type="text"
             placeholder="Search Amazon.in"
           />
-          <div className="w-[10%] rounded-lg flex items-center justify-center">
-          <IoSearch
-            onClick={searchHandler}
-            className="text-2xl text-black font-bold mx-2"
-          />
+          <div className="w-[20%] lg:w-[10%] rounded-lg flex items-center justify-center">
+            <IoSearch
+              onClick={searchHandler}
+              className="text-2xl text-black font-bold mx-2"
+            />
           </div>
         </div>
 
         <div className="lg:hidden text-white z-[99999] flex gap-2">
           <Sheet>
-          <div className="flex lg:hidden text-nowrap">
-                   
-                    <SignedIn>
-                      <UserButton />
-                    </SignedIn>
-                  </div>
+            <div className="flex lg:hidden text-nowrap">
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+            </div>
             <SheetTrigger>
               <IoMdMenu className="text-2xl" />
             </SheetTrigger>
@@ -71,7 +72,6 @@ const Header = () => {
               <SheetHeader>
                 <SheetTitle>Amazon Clone</SheetTitle>
                 <SheetDescription className="flex flex-col items-center gap-5 ">
-                  
                   <div className="leading-none mt-3 ">
                     <h1 className="text-xs">Returns</h1>
                     <h1 className="font-bold text-sm">& Orders</h1>
