@@ -3,6 +3,7 @@ import SearchResult from "@/components/SearchResult";
 import { useSupabase } from "@/lib/supabase/hooks/useSupabase";
 import { useParams } from "next/navigation";
 import React, { useEffect } from "react";
+import Header from "@/components/Header";
 
 const SearchPage = () => {
   const { query } = useParams();
@@ -14,6 +15,7 @@ const SearchPage = () => {
 
   return (
     <div>
+        <Header />
       <SearchResult filterData={filterData} />
     </div>
   );
