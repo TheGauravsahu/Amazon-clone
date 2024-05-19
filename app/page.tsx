@@ -14,7 +14,7 @@ import Header from "@/components/Header";
 export default function Home() {
   
   return (
-    <div className="w-full overflow-x-hidden bg-white">
+    <div className="w-full overflow-x-hidden bg-[#E3E6E6]">
         <Header />
       <div className="w-full -z-0 scale-90 lg:scale-100">
         <Carousel>
@@ -53,6 +53,9 @@ export default function Home() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+      </div>
+      <div className="bg-[#E3E6E6]">
+        <Product />
       </div>
     </div>
   );

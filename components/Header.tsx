@@ -70,7 +70,7 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent className="bg-white text-black z-[99999]">
               <SheetHeader>
-                <SheetTitle>Amazon Clone</SheetTitle>
+                <SheetTitle className="text-center">Amazon Clone</SheetTitle>
                 <SheetDescription className="flex flex-col items-center gap-5 ">
                   <div className="leading-none mt-3 ">
                     <h1 className="text-xs">Returns</h1>
