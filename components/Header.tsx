@@ -59,9 +59,7 @@ const Header = () => {
         <div className="lg:hidden text-white z-[99999] flex gap-2">
           <Sheet>
           <div className="flex lg:hidden text-nowrap">
-                    <SignedOut>
-                      <SignInButton />
-                    </SignedOut>
+                   
                     <SignedIn>
                       <UserButton />
                     </SignedIn>
